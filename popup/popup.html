@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>AccessiRead</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="header-content">
+                <img src="../assets/icons/icon48.png" alt="AccessiRead Logo" aria-label="AccessiRead extension logo">
+                <h1>AccessiRead</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="settings">
+            <div class="setting-item">
+                <label for="font-toggle" class="toggle-label">Enable OpenDyslexic font</label>
+                <label class="switch">
+                    <input type="checkbox" id="font-toggle" aria-label="Toggle OpenDyslexic font on or off">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="setting-item">
+                <label for="spacing-slider" class="slider-label">Increase Line Spacing</label>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" class="range-slider" id="spacing-slider"
+                        aria-label="Adjust line spacing">
+                    <span id="spacing-value" aria-live="polite"></span>
+                </div>
+            </div>
+            <div class="setting-item">
+                <label for="dark-mode-toggle" class="toggle-label">Dark Mode</label>
+                <label class="switch">
+                    <input type="checkbox" id="dark-mode-toggle" aria-label="Toggle dark mode on or off">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </section>
+    </main>
+    <script src="popup.js"></script>
+</body>
+
+</html>
