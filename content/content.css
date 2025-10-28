@@ -1,0 +1,107 @@
+/* Font loading */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('../assets/fonts/OpenDyslexic-Regular.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenDyslexicBold';
+  src: url('../assets/fonts/OpenDyslexic-Bold.woff2') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenDyslexicItalic';
+  src: url('../assets/fonts/OpenDyslexic-Italic.woff2') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenDyslexicBoldItalic';
+  src: url('../assets/fonts/OpenDyslexic-Bold-Italic.woff2') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* CSS Variables for dynamic settings */
+body.accessiread-active {
+  /* Default values. These will be overwritten by JS when settings are applied. */
+  --ar-line-height: 1.5;
+  --ar-letter-spacing: 0.05em;
+  --ar-font-size: 16px;
+}
+
+/* Base styles when active */
+body.accessiread-active p,
+body.accessiread-active h1,
+body.accessiread-active h2,
+body.accessiread-active h3,
+body.accessiread-active h4,
+body.accessiread-active h5,
+body.accessiread-active h6,
+body.accessiread-active li,
+body.accessiread-active a,
+body.accessiread-active span,
+body.accessiread-active strong,
+body.accessiread-active em,
+body.accessiread-active div,
+body.accessiread-active td,
+body.accessiread-active th,
+body.accessiread-active caption,
+body.accessiread-active blockquote,
+body.accessiread-active label {
+  font-family: 'OpenDyslexic', Arial, sans-serif !important;
+  line-height: normal !important;
+}
+
+/* Themes */
+body.accessiread-dark {
+  background-color: black !important;
+  color: #ffffff !important;
+}
+
+body.accessiread-dark * {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+/* Line spacing */
+body.accessiread-spacing-1 {
+  line-height: 1 !important;
+}
+
+body.accessiread-spacing-2 {
+  line-height: 2 !important;
+}
+
+body.accessiread-spacing-25 {
+  line-height: 2.5 !important;
+}
+
+body.accessiread-spacing-3 {
+  line-height: 3 !important;
+}
+
+body.accessiread-spacing-35 {
+  line-height: 3.5 !important;
+}
+
+body.accessiread-spacing-4 {
+  line-height: 4 !important;
+}
+
+body.accessiread-spacing-45 {
+  line-height: 4.5 !important;
+}
+
+body.accessiread-spacing-5 {
+  line-height: 5 !important;
+}
+
+/* Letter Spacing/Tracking (TO DO) */
+
+/* Font Sizes (TO DO) */
