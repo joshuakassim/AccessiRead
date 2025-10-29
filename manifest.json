@@ -3,7 +3,8 @@
   "description": "Make any website readable for people with dyslexia, ADHD, and reading difficulties",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "storage", "scripting"],
+  "permissions": ["activeTab", "storage", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
