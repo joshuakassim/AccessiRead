@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AccessiRead Options</title>
+    <link rel="stylesheet" href="../popup/popup.css">
+    <style>
+        /* Minimal CSS for preview */
+        .preview-area {
+            --preview-font-family: 'OpenDyslexic', Arial, sans-serif;
+            --preview-line-height: 1.5;
+            --preview-bg: #ffffff;
+            --preview-color: #000000;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            min-height: 150px;
+            /* Use a variable for the preview font for dynamic updating */
+            font-family: var(--preview-font-family, 'OpenDyslexic', Arial, sans-serif);
+            line-height: var(--preview-line-height, 1.5);
+            background-color: var(--preview-bg, #ffffff);
+            color: var(--preview-color, #000000);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../assets/icons/icon48.png" alt="AccessiRead Logo" aria-label="AccessiRead extension logo">
+            <h1>AccessiRead Advanced Settings</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="settings-controls">
+            <h2>Default Configuration</h2>
+            <!-- Dyslexic Font Toggle -->
+            <div class="setting-item">
+                <label for="font-toggle" class="toggle-label">Enable OpenDyslexic font</label>
+                <label class="switch">
+                    <input type="checkbox" id="font-toggle" aria-label="Toggle OpenDyslexic font on or off">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <!-- Line Spacing -->
+            <div class="setting-item">
+                <label for="spacing-slider">Default Line Spacing</label>
+                <input type="range" id="spacing-slider" min="1" max="5" step="0.5" aria-label="Adjust line spacing">
+                <span id="spacing-value" aria-live="polite"></span>
+            </div>
+
+            <!-- Dark Mode Toggle -->
+            <div class="setting-item">
+                <label for="dark-mode-toggle" class="toggle-label">Dark Mode</label>
+                <label class="switch">
+                    <input type="checkbox" id="dark-mode-toggle" aria-label="Toggle dark mode on or off">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <button id="reset-button">Reset All to Default Settings</button>
+        </section>
+
+        <section class="preview-container">
+            <h2>Live Preview</h2>
+            <div id="live-preview" class="preview-area">
+                <p class="preview-text">
+                    This is a live preview of how your default text settings will appear.
+                    Adjust the controls above to see the changes applied immediately
+                    to this text block. Hierarchy will be maintained.
+                </p>
+                <h3>Preview Heading</h3>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="options.js"></script>
+</body>
+
+</html>
