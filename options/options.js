@@ -8,28 +8,24 @@ const darkModeToggle = document.getElementById('dark-mode-toggle');
 const resetButton = document.getElementById('reset-button');
 const preview = document.getElementById('live-preview');
 
-// --- Functions ---
+// Updates the live preview based on current control values.
 
-/**
- * Updates the live preview based on current control values.
- */
 function updatePreview() {
   const lineSpacing = spacingSlider.value;
 
-  // 1. Update text spans
+  // Update slider display
   spacingValue.textContent = spacingSlider.value;
 
-  // 2. Apply styles to the preview area using CSS variables
-  // Note: You may need a full font-scaling function here eventually,
-  // but for the options page, direct element style for demonstration is okay.
+  // Apply styles to the preview area using CSS variables
   preview.style.setProperty('--preview-line-height', lineSpacing);
 
-  // TODO: Add logic to apply OpenDyslexic font and Dark Mode classes/styles to preview
+  // Set font family based on toggle
   preview.style.setProperty(
     '--preview-font-family',
     fontToggle.checked ? "'OpenDyslexic'" : 'Arial, sans-serif'
   );
 
+  // Set colors based on dark mode toggle
   preview.style.setProperty(
     '--preview-bg',
     darkModeToggle.checked ? '#121212' : '#ffffff'
@@ -40,9 +36,8 @@ function updatePreview() {
   );
 }
 
-/**
- * Loads settings from storage and populates the controls.
- */
+// Loads settings from storage and populates the controls.
+
 async function loadOptions() {
   const settings = await loadSettings();
 
@@ -51,22 +46,19 @@ async function loadOptions() {
   fontToggle.checked = settings.dyslexicFont;
   darkModeToggle.checked = settings.darkMode;
 
+  // Update the preview area
   updatePreview();
 }
 
-/**
- * Saves a setting when a control value changes.
- */
+// Saves a setting when a control value changes.
 async function saveOption(key, value) {
   await saveSettings({ [key]: value });
   updatePreview(); // Update preview after saving
   console.log(`Setting '${key}' saved.`);
 
-  // Optional: Send a message to the background script to notify active tabs
+  // Send a message to the background script to notify active tabs
   chrome.runtime.sendMessage({ action: 'UPDATE_SETTINGS' });
 }
-
-// --- Event Listeners ---
 
 // Listen for input changes on the Line Spacing slider
 spacingSlider.addEventListener('input', function () {
@@ -87,7 +79,7 @@ darkModeToggle.addEventListener('change', function () {
 // Reset Button Handler
 resetButton.addEventListener('click', async () => {
   await resetSettings();
-  await loadOptions(); // Reload controls with default values
+  await loadOptions();
 
   // Send message to background to update active tabs immediately
   chrome.runtime.sendMessage({ action: 'UPDATE_SETTINGS' });
