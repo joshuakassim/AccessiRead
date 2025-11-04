@@ -59,17 +59,16 @@ function applySettings(settings) {
   }
 
   // Apply spacing
-  // body.classList.remove(
-  //   ...body.classList.filter((c) => c.startsWith('accessiread-spacing-'))
-  // );
-  // if (settings.lineSpacing) {
-  //   // Test out divide by 50 to scale to class
-  //   body.classList.add(`accessiread-spacing-${settings.lineSpacing}`);
-  // }
+  body.classList.forEach((cls) => {
+    if (cls.startsWith('accessiread-spacing')) {
+      body.classList.remove(cls);
+    }
+  });
 
-  // Apply letter spacing (TO DO)
-
-  // Apply font size (TO DO)
+  if (settings.lineSpacing) {
+    body.style.setProperty('--ar-line-height', settings.lineSpacing);
+    body.classList.add('accessiread-spacing');
+  }
 
   // Apply color theme
   if (settings.darkMode) {
