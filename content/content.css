@@ -55,7 +55,6 @@ body.accessiread-active caption,
 body.accessiread-active blockquote,
 body.accessiread-active label {
   font-family: 'OpenDyslexic', Arial, sans-serif !important;
-  line-height: normal !important;
 }
 
 /* Themes */
@@ -70,38 +69,23 @@ body.accessiread-dark * {
 }
 
 /* Line spacing */
-body.accessiread-spacing-1 {
-  line-height: 1 !important;
+body.accessiread-spacing p,
+body.accessiread-spacing h1,
+body.accessiread-spacing h2,
+body.accessiread-spacing h3,
+body.accessiread-spacing h4,
+body.accessiread-spacing h5,
+body.accessiread-spacing h6,
+body.accessiread-spacing li,
+body.accessiread-spacing a,
+body.accessiread-spacing span,
+body.accessiread-spacing strong,
+body.accessiread-spacing em,
+body.accessiread-spacing div,
+body.accessiread-spacing td,
+body.accessiread-spacing th,
+body.accessiread-spacing caption,
+body.accessiread-spacing blockquote,
+body.accessiread-spacing label {
+  line-height: var(--ar-line-height, normal) !important;
 }
-
-body.accessiread-spacing-2 {
-  line-height: 2 !important;
-}
-
-body.accessiread-spacing-25 {
-  line-height: 2.5 !important;
-}
-
-body.accessiread-spacing-3 {
-  line-height: 3 !important;
-}
-
-body.accessiread-spacing-35 {
-  line-height: 3.5 !important;
-}
-
-body.accessiread-spacing-4 {
-  line-height: 4 !important;
-}
-
-body.accessiread-spacing-45 {
-  line-height: 4.5 !important;
-}
-
-body.accessiread-spacing-5 {
-  line-height: 5 !important;
-}
-
-/* Letter Spacing/Tracking (TO DO) */
-
-/* Font Sizes (TO DO) */
