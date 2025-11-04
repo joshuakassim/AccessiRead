@@ -39,7 +39,7 @@ const spacingValue = document.getElementById('spacing-value');
 
 spacingSlider.addEventListener('input', function () {
   spacingValue.textContent = `Spacing : ${this.value}`;
-  chrome.storage.sync.set({ lineSpacing: this.value });
+  chrome.storage.sync.set({ lineSpacing: parseFloat(this.value) });
   sendSettingUpdate();
 });
 
