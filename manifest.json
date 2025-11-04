@@ -29,7 +29,11 @@
   "background": {
     "service_worker": "background/background.js"
   },
-  chore
+  "options_page": "options/options.html",
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": false
+  },
   "commands": {
     "toggle-accessiread": {
       "suggested_key": {
