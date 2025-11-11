@@ -34,14 +34,6 @@
     "page": "options/options.html",
     "open_in_tab": false
   },
-  "commands": {
-    "toggle-accessiread": {
-      "suggested_key": {
-        "default": "Alt+R"
-      },
-      "description": "Toggle AccessiRead on/off"
-    }
-  },
   "web_accessible_resources": [
     {
       "resources": ["utils/storage.js", "content/content.css", "assets/fonts/*"],
