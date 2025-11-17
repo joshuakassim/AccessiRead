@@ -57,17 +57,17 @@ These permissions are used solely for enhancing readability and do not collect o
 
 - ### Popup Interface
 
-  ##### ![Popup interface](popup.png)
+  ##### <img width="701" height="788" alt="image" src="https://github.com/user-attachments/assets/f24287f1-7c91-4ed8-8643-a379e0e1619a" />
 
 - ### Options Page with Live Preview
 
-  ##### ![Option Page](<AR options preview Gif.gif>)
+  ##### ![AR options preview Gif](https://github.com/user-attachments/assets/d336d68b-e16c-4821-82ac-8150420960b0)
 
 - ### Before/After Example on a Web Page
 
-  ##### ![Before](before.png)
+  ##### <img width="1919" height="977" alt="image" src="https://github.com/user-attachments/assets/9a9a6aba-582d-44f3-bc9a-143b78b8475e" />
 
-  ##### ![After](after.png)
+  ##### <img width="1919" height="972" alt="image" src="https://github.com/user-attachments/assets/dfca56a6-4a6f-4613-945f-1b3d040f09cc" />
 
 ## Contributing
 
